@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TM-leads</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <header class="header">
+            <div class="wrapper header-box">
+                <!-- Logo -->
+                <logo class="logo">
+                    <svg width="118" height="52" viewBox="0 0 118 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M60.4458 25.2407H55.1782L52.4292 37.8835H58.1033C62.1859 37.8835 63.3977 35.6359 63.4121 33.8624C63.4246 32.3171 62.5474 31.685 61.7193 31.4128L61.7463 31.2724C62.9074 31.0178 64.3163 30.0696 64.3321 28.1205C64.3473 26.2416 62.8936 25.2407 60.4458 25.2407ZM56.1694 35.3022L56.726 32.7913H58.9662C59.8225 32.7913 60.33 33.1424 60.3241 33.8712C60.318 34.6262 59.7417 35.3022 58.5307 35.3022H56.1694ZM57.2831 30.21L57.8041 27.822H59.8713C60.7276 27.822 61.2007 28.1468 61.1951 28.8404C61.1893 29.5603 60.6478 30.21 59.4109 30.21H57.2831Z"
+                            fill="white" />
+                        <path
+                            d="M65.9755 25.2407L63.2266 37.8835H72.2846L72.8863 35.1442H67.1151L69.2624 25.2407H65.9755Z"
+                            fill="white" />
+                        <path
+                            d="M78.6758 25.2407L72.4778 37.6201L72.4238 37.8835H75.5463L76.7612 35.2496H80.4546L80.5285 37.8835H83.5212L83.5752 37.6201L82.7584 25.2407H78.6758ZM77.9936 32.5981L80.124 27.9888H80.2624L80.3809 32.5981H77.9936Z"
+                            fill="white" />
+                        <path
+                            d="M89.7932 25.2407H86.2383L83.4893 37.8835H87.866C93.3758 37.8835 95.1821 33.7746 95.2105 30.2627C95.2368 27.0054 93.0974 25.2407 89.7932 25.2407ZM87.308 35.2144L88.8808 27.9097H89.6679C91.1902 27.9097 92.057 28.7526 92.044 30.3593C92.0251 32.7035 90.8457 35.2144 88.32 35.2144H87.308Z"
+                            fill="white" />
+                        <path
+                            d="M97.0356 25.2407L94.2867 37.8835H103.715L104.272 35.3022H98.0615L98.6092 32.8088H103.834L104.391 30.2276H99.175L99.6961 27.822H105.785L106.343 25.2407H97.0356Z"
+                            fill="white" />
+                        <path
+                            d="M65.5149 10.6074L64.9309 13.3116H68.5118L66.3469 23.2502H69.5992L71.764 13.3116H75.345L75.929 10.6074H65.5149Z"
+                            fill="white" />
+                        <path
+                            d="M81.4415 10.6074H76.3296L73.5807 23.2502H76.7637L77.8418 18.2809H78.0148L80.5782 23.2502H83.8045L83.8585 22.9868L81.2756 18.2984C84.4261 18.035 85.5912 16.2176 85.609 14.0139C85.6266 11.8366 84.0191 10.6074 81.4415 10.6074ZM78.3449 15.963L78.9555 13.1886H80.9882C81.9742 13.1886 82.5333 13.5837 82.527 14.3563C82.5205 15.1641 81.9432 15.963 80.5073 15.963H78.3449Z"
+                            fill="white" />
+                        <path
+                            d="M89.4451 10.6074L83.2471 22.9868L83.1931 23.2502H86.3155L87.5305 20.6163H91.2238L91.2977 23.2502H94.2905L94.3445 22.9868L93.5277 10.6074H89.4451ZM88.7628 17.9648L90.8933 13.3555H91.0317L91.1501 17.9648H88.7628Z"
+                            fill="white" />
+                        <path
+                            d="M100.562 10.6074H97.0075L94.2586 23.2502H98.6352C104.145 23.2502 105.951 19.1413 105.98 15.6294C106.006 12.3721 103.867 10.6074 100.562 10.6074ZM98.0773 20.5811L99.65 13.2764H100.437C101.959 13.2764 102.826 14.1193 102.813 15.726C102.794 18.0702 101.615 20.5811 99.0893 20.5811H98.0773Z"
+                            fill="white" />
+                        <path
+                            d="M107.805 10.6074L105.056 23.2502H114.484L115.041 20.6689H108.831L109.378 18.1755H114.603L115.16 15.5943H109.944L110.465 13.1886H116.555L117.112 10.6074H107.805Z"
+                            fill="white" />
+                        <path d="M30.5881 37.9176L10.0005 2.37646L20.2266 10.5829L33.2982 33.2235L30.5881 37.9176Z"
+                            fill="#5E47FF" />
+                        <path d="M49.9138 16.4L29.428 52L31.4219 39.0407L44.4935 16.4L49.9138 16.4Z" fill="#5E47FF" />
+                        <path d="M21.7354 10.647L62.8088 10.5881L50.5888 15.3411L24.4456 15.3411L21.7354 10.647Z"
+                            fill="#5E47FF" />
+                        <path d="M30.5881 37.9176L10.0005 2.37646L20.2266 10.5829L33.2982 33.2235L30.5881 37.9176Z"
+                            fill="#5E47FF" />
+                        <path d="M49.9138 16.4L29.428 52L31.4219 39.0407L44.4935 16.4L49.9138 16.4Z" fill="#5E47FF" />
+                        <g filter="url(#filter0_f_185_233)">
+                            <path d="M21.7354 10.647L62.8088 10.5881L50.5888 15.3411L24.4456 15.3411L21.7354 10.647Z"
+                                fill="#5E47FF" />
+                        </g>
+                        <path d="M34.0366 30.541L41.7799 17.1293H26.2933L34.0366 30.541Z" fill="#57E1FF" />
+                        <g filter="url(#filter1_f_185_233)">
+                            <path d="M30.5881 37.9176L10.0005 2.37646L20.2266 10.5829L33.2982 33.2235L30.5881 37.9176Z"
+                                fill="#5E47FF" />
+                        </g>
+                        <g filter="url(#filter2_f_185_233)">
+                            <path d="M49.9138 16.4L29.428 52L31.4219 39.0407L44.4935 16.4L49.9138 16.4Z"
+                                fill="#5E47FF" />
+                        </g>
+                        <path d="M21.7354 10.647L62.8088 10.5881L50.5888 15.3411L24.4456 15.3411L21.7354 10.647Z"
+                            fill="#5E47FF" />
+                        <defs>
+                            <filter id="filter0_f_185_233" x="1.73544" y="-9.41187" width="81.0733" height="44.7529"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur_185_233" />
+                            </filter>
+                            <filter id="filter1_f_185_233" x="-9.99954" y="-17.6235" width="63.2978" height="75.5413"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur_185_233" />
+                            </filter>
+                            <filter id="filter2_f_185_233" x="9.42804" y="-3.59985" width="60.4857" height="75.5999"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur_185_233" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </logo>
+                <!--Navigation Hamburger on Mobile view -->
+                <button type="button" class="hamburger">
+                    <span class="menu-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.39999 9.33324C4.39999 8.81777 4.81786 8.3999 5.33333 8.3999H26.6667C27.1821 8.3999 27.6 8.81777 27.6 9.33324C27.6 9.8487 27.1821 10.2666 26.6667 10.2666H5.33333C4.81786 10.2666 4.39999 9.8487 4.39999 9.33324Z"
+                                fill="#E7F7F8" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.39999 16C4.39999 15.4845 4.81786 15.0667 5.33333 15.0667H26.6667C27.1821 15.0667 27.6 15.4845 27.6 16C27.6 16.5154 27.1821 16.9333 26.6667 16.9333H5.33333C4.81786 16.9333 4.39999 16.5154 4.39999 16Z"
+                                fill="#E7F7F8" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.39999 22.6665C4.39999 22.151 4.81786 21.7332 5.33333 21.7332H26.6667C27.1821 21.7332 27.6 22.151 27.6 22.6665C27.6 23.182 27.1821 23.5998 26.6667 23.5998H5.33333C4.81786 23.5998 4.39999 23.182 4.39999 22.6665Z"
+                                fill="#E7F7F8" />
+                        </svg>
+                    </span>
+                </button>
+                <!-- Navigation Menu-->
+                <nav class="navigation">
+                    <span class="close-icon">✖</span>
+                    <ul class="navigation-menu">
+                        <li><a class="menu-item" href="#statistics">цифры</a></li>
+                        <li><a class="menu-item" href="#deals">сделки онлайн</a></li>
+                        <li><a class="menu-item" href="#about">о компании</a></li>
+                        <li><a class="menu-item" href="#how-to">как начать</a></li>
+                        <li><a class="menu-item" href="#tariffs">тарифы</a></li>
+                        <li><a class="menu-item" href="#reviews">отзывы</a></li>
+                        <li><a class="menu-item" href="#faq">FAQ</a></li>
+                    </ul>
+                    <!--Login Registration Buttons-->
+                    <div class="login-registration">
+                        <button class="button-transparent">вход</button>
+                        <button class="button-filled">регистрация</button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <!--Section Main Page-->
+            <section class="main-page">
+                <div class="wrapper">
+                    <div class="main-page-content">
+                        <div class="main-text-box">
+                            <h1 class="main-title">моментально копируй сделки профи трейдеров</h1>
+                            <p class="main-text">Начни копировать сделки с успешной командой профессиональных трейдеров
+                                в
+                                автоматическом режиме.
+                        </div>
+                        <div class="subscribe-box">
+                            <div class="subscribe">
+                                <input type="text" placeholder="Ваш e–mail"></input>
+                                <button type="submit" class="button-filled">Начать</button>
+                            </div>
+                            <p>5 дней бесплатного пользования</p>
+                        </div>
+                        <div class="main-page-background">
+                            <img src="./img/loading_page_background.png" alt="loading page background image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Section Statistics-->
+            <section class="statistics" id="statistics">
+                <div class="wrapper statistics-box">
+                    <div class="statistics-title-box">
+                        <h2 class="statistics-title">цифры</h2>
+                        <p class="statistics-text">сентябрь 2022</p>
+                    </div>
+                    <div class="card-box">
+                        <div class="statistics-card">
+                            <p class="title">Торговой прибыли</p>
+                            <p class="value">2756%</p>
+                        </div>
+                        <div class="statistics-card">
+                            <p class="title">фьючерсных и спотовых сделок</p>
+                            <p class="value">67</p>
+                        </div>
+                        <div class="statistics-card">
+                            <p class="title">прибыль подписчиков</p>
+                            <p class="value">375000</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Section Past Deals-->
+            <section class="deals" id="deals">
+                <div class="wrapper deals-box">
+                    <h2 class="deals-title">Прошедшие сделки</h2>
+                    <div class="deals-status">
+                        <div class="round-dot"></div>
+                        <p class="deals-status-text">Онлайн</p>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel" id="carousel">
+                            <div class="carousel-item">
+                                <div class="currency-box">
+                                    <h4 class="currecny">NEAR/USDT</h4>
+                                    <p class="timestamp">SPOT · 1 мин. назад</p>
+                                </div>
+                                <div class="income-box">
+                                    <p class="income">Прибыль</p>
+                                    <p class="income-value">58.6206%</p>
+                                </div>
+                                <div class="target-box">
+                                    <p class="target">Цель 4</p>
+                                    <p class="date">Дата входа 06.10.2022</p>
+                                </div>
+                                <svg class="card-background" width="111" height="161" viewBox="0 0 111 161" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.15">
+                                        <path
+                                            d="M63.4329 116.829L4.96763e-05 7.32201L31.5081 32.6069L71.7832 102.365L63.4329 116.829Z"
+                                            fill="#000001" />
+                                        <path
+                                            d="M122.979 50.5303L59.8598 160.218L66.0031 120.289L106.278 50.5303L122.979 50.5303Z"
+                                            fill="#000001" />
+                                        <path d="M74.0578 94.1007L97.9158 52.7775H50.1999L74.0578 94.1007Z"
+                                            fill="#000001" />
+                                        <path
+                                            d="M36.1578 32.8049L162.71 32.6237L125.058 47.2681L44.5081 47.2681L36.1578 32.8049Z"
+                                            fill="#000001" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="currency-box">
+                                    <h4 class="currecny">BTC/USDT</h4>
+                                    <p class="timestamp">SPOT · 1 мин. назад</p>
+                                </div>
+                                <div class="income-box">
+                                    <p class="income">Прибыль</p>
+                                    <p class="income-value">58.6206%</p>
+                                </div>
+                                <div class="target-box">
+                                    <p class="target">Цель 4</p>
+                                    <p class="date">Дата входа 06.10.2022</p>
+                                </div>
+                                <svg class="card-background" width="111" height="161" viewBox="0 0 111 161" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.15">
+                                        <path
+                                            d="M63.4329 116.829L4.96763e-05 7.32201L31.5081 32.6069L71.7832 102.365L63.4329 116.829Z"
+                                            fill="#000001" />
+                                        <path
+                                            d="M122.979 50.5303L59.8598 160.218L66.0031 120.289L106.278 50.5303L122.979 50.5303Z"
+                                            fill="#000001" />
+                                        <path d="M74.0578 94.1007L97.9158 52.7775H50.1999L74.0578 94.1007Z"
+                                            fill="#000001" />
+                                        <path
+                                            d="M36.1578 32.8049L162.71 32.6237L125.058 47.2681L44.5081 47.2681L36.1578 32.8049Z"
+                                            fill="#000001" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="currency-box">
+                                    <h4 class="currecny">NEAR/USDT</h4>
+                                    <p class="timestamp">SPOT · 1 мин. назад</p>
+                                </div>
+                                <div class="income-box">
+                                    <p class="income">Прибыль</p>
+                                    <p class="income-value">58.6206%</p>
+                                </div>
+                                <div class="target-box">
+                                    <p class="target">Цель 4</p>
+                                    <p class="date">Дата входа 06.10.2022</p>
+                                </div>
+                                <svg class="card-background" width="111" height="161" viewBox="0 0 111 161" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.15">
+                                        <path
+                                            d="M63.4329 116.829L4.96763e-05 7.32201L31.5081 32.6069L71.7832 102.365L63.4329 116.829Z"
+                                            fill="#000001" />
+                                        <path
+                                            d="M122.979 50.5303L59.8598 160.218L66.0031 120.289L106.278 50.5303L122.979 50.5303Z"
+                                            fill="#000001" />
+                                        <path d="M74.0578 94.1007L97.9158 52.7775H50.1999L74.0578 94.1007Z"
+                                            fill="#000001" />
+                                        <path
+                                            d="M36.1578 32.8049L162.71 32.6237L125.058 47.2681L44.5081 47.2681L36.1578 32.8049Z"
+                                            fill="#000001" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="currency-box">
+                                    <h4 class="currecny">BTC/USDT</h4>
+                                    <p class="timestamp">SPOT · 1 мин. назад</p>
+                                </div>
+                                <div class="income-box">
+                                    <p class="income">Прибыль</p>
+                                    <p class="income-value">58.6206%</p>
+                                </div>
+                                <div class="target-box">
+                                    <p class="target">Цель 4</p>
+                                    <p class="date">Дата входа 06.10.2022</p>
+                                </div>
+                                <svg class="card-background" width="111" height="161" viewBox="0 0 111 161" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.15">
+                                        <path
+                                            d="M63.4329 116.829L4.96763e-05 7.32201L31.5081 32.6069L71.7832 102.365L63.4329 116.829Z"
+                                            fill="#000001" />
+                                        <path
+                                            d="M122.979 50.5303L59.8598 160.218L66.0031 120.289L106.278 50.5303L122.979 50.5303Z"
+                                            fill="#000001" />
+                                        <path d="M74.0578 94.1007L97.9158 52.7775H50.1999L74.0578 94.1007Z"
+                                            fill="#000001" />
+                                        <path
+                                            d="M36.1578 32.8049L162.71 32.6237L125.058 47.2681L44.5081 47.2681L36.1578 32.8049Z"
+                                            fill="#000001" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="currency-box">
+                                    <h4 class="currecny">NEAR/USDT</h4>
+                                    <p class="timestamp">SPOT · 1 мин. назад</p>
+                                </div>
+                                <div class="income-box">
+                                    <p class="income">Прибыль</p>
+                                    <p class="income-value">58.6206%</p>
+                                </div>
+                                <div class="target-box">
+                                    <p class="target">Цель 4</p>
+                                    <p class="date">Дата входа 06.10.2022</p>
+                                </div>
+                                <svg class="card-background" width="111" height="161" viewBox="0 0 111 161" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.15">
+                                        <path
+                                            d="M63.4329 116.829L4.96763e-05 7.32201L31.5081 32.6069L71.7832 102.365L63.4329 116.829Z"
+                                            fill="#000001" />
+                                        <path
+                                            d="M122.979 50.5303L59.8598 160.218L66.0031 120.289L106.278 50.5303L122.979 50.5303Z"
+                                            fill="#000001" />
+                                        <path d="M74.0578 94.1007L97.9158 52.7775H50.1999L74.0578 94.1007Z"
+                                            fill="#000001" />
+                                        <path
+                                            d="M36.1578 32.8049L162.71 32.6237L125.058 47.2681L44.5081 47.2681L36.1578 32.8049Z"
+                                            fill="#000001" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <input type="range" id="carousel-slider" min="0" max="100" value="0" step="0.1">
+                    </div>
+                </div>
+            </section>
+            <!-- Section About-->
+            <section class="about" id="about">
+                <div class="wrapper about-box">
+                    <h2 class="about-title">О компании</h2>
+                    <p class="about-text">Мы опытная команда, для которой трейдинг – профессия. TradeBlade является
+                        авторизованным официальным брокером биржи
+                        Binance.
+                        <br><br>
+                        Он представляет пользователям множество преимуществ, таких как более високая скорость
+                        синхронизации
+                        API и возможность
+                        создать учетную запись Binance через платформу TradeBlade всего в 1 клик.
+                    </p>
+                </div>
+            </section>
+            <!--Section Company Description-->
+            <section class="company-description" id="company-description">
+                <div class="wrapper company-description-box">
+                    <div class="subscribe-box">
+                        <h4 class="subscribe-title">Попробуйте сейчас и получите
+                            5 дней бесплатного пользования</h4>
+                        <div class="description subscribe">
+                            <input type="text" placeholder="Ваш e–mail"></input>
+                            <button type="submit" class="button-filled">попробовать</button>
+                        </div>
+                    </div>
+                    <!-- Card list-->
+                    <h2 class="description-title">tradeblade это</h2>
+                    <div class="description-card-box">
+                        <div class="description-card">
+                            <img src="./img/description_card_icon_1.svg" alt="icon">
+                            <div>
+                                <h4 class="description-card-title">Копи–трейдинг 24/7</h4>
+                                <p class="description-card-text">Copy–Trading позволяет следить за сделками команды и
+                                    получать прибыль 24/7 без
+                                    каких–либо
+                                    усилий или проблем для вас.</p>
+                            </div>
+                        </div>
+                        <div class="description-card">
+                            <img src="./img/description_card_icon_2.svg" alt="icon">
+                            <div>
+                                <h4 class="description-card-title">Высокая прибыль каждий день</h4>
+                                <p class="description-card-text">Каждая сделка показывает хорошие результаты на рынках
+                                    за счет хорошего денежного и
+                                    риск
+                                    менеджмента.</p>
+                            </div>
+                        </div>
+                        <div class="description-card">
+                            <img src="./img/description_card_icon_3.svg" alt="icon">
+                            <div>
+                                <h4 class="description-card-title">Сильное окружение</h4>
+                                <p class="description-card-text">Ты попадаешь в сильное крипто окружение, ведь
+                                    развиваться легче когда нас много. В
+                                    чате
+                                    присутствуют люди из нашей
+                                    команды, которые общаються со всеми, помагают и подсказывают.</p>
+                            </div>
+                        </div>
+                        <div class="description-card">
+                            <img src="./img/description_card_icon_4.svg" alt="icon">
+                            <div>
+                                <h4 class="description-card-title">Торговля спотовыми и фьючерсными сделками</h4>
+                                <p class="description-card-text">Платформа для копи–трейдинга поддерживает торговлю как
+                                    спотовыми, так и фьючерсными
+                                    сделками
+                                    на Binance.</p>
+                            </div>
+                        </div>
+                        <div class="description-card">
+                            <img src="./img/description_card_icon_5.svg" alt="icon">
+                            <div>
+                                <h4 class="description-card-title">Собственный курс по трейдингу</h4>
+                                <p class="description-card-text">Мы хотим менять комьюнити, улучшать его. В личном
+                                    кабинете на сайте вы найдете наш
+                                    собственный курс по криптовалютам,
+                                    который поможет увереннее понимать наши сигналы и разрабатывать свои.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--
+            Section How To
+            <section class="how-to" id="how-to">
+                <h2>Как начать пользоваться сервисом</h2>
+                <ul>
+                    <li>
+                        <h4>Создайте аккаунт</h4>
+                        <p>Начните бесплатную 3-дневную пробную версию. Кредитная карта не требуется.</p>
+                    </li>
+                    <li>
+                        <h4>Подключить обмен API ключами</h4>
+                        <p>Просто вставьте свои ключи API из личного кабинета.</p>
+                    </li>
+                    <li>
+                        <h4>Настройте аккаунт</h4>
+                        <p>Поставьте нужные настройки депозита на каждый сигнал и нажмите сохранить.</p>
+                    </li>
+                    <li>
+                        <h4>Ваш копитрейдер запущен</h4>
+                        <p>Ваш копитрейдер запущен</p>
+                    </li>
+                </ul>
+                <button type="button">Просто расслабьтесь и начните получать пассивный доход от криптовалюты с помощью
+                    TradeBlade</button>
+            </section>
+            -->
+            <!--Section Tariffs-->
+            <section class="tariffs" id="tariffs">
+                <div class="wrapper tariffs-box">
+                    <h2 class="tariffs-title">тарифы</h2>
+                    <div class="tariff-select">
+                        <button type="button" class="button-filled">спот</button>
+                        <button type="button" class="button-filled">фьючерс</button>
+                    </div>
+                    <div>
+                        <div class="tariff-option">
+                            <h3 class="tariff-option-title">STANDARD</h3>
+                            <div class="tariff-details-box">
+                                <div class="tariff-details"> <img src="./img/check_icon.svg" alt="check icon">
+                                    <p>Ручной трейдинг</p>
+                                </div>
+                                <hr class="dashed-divider">
+                                <div class="tariff-details"><img src="./img/check_icon.svg" alt="check icon">
+                                    <p>Автоматическое или полуавтоматическое копирование сделок</p>
+                                </div>
+                                <hr class="dashed-divider">
+                                <div class="tariff-details"><img src="./img/check_icon.svg" alt="check icon">
+                                    <p>Личный кабинет со статистикой</p>
+                                </div>
+                                <hr class="dashed-divider">
+                                <div class="tariff-details"><img src="./img/check_icon.svg" alt="check icon">
+                                    <p>Среднесрочные сделки с уровнями набора портфеля</p>
+                                </div>
+                                <hr class="dashed-divider">
+                            </div>
+                            <div>
+                                <div class="duration-box">
+                                    <div class="tariff-container">
+                                        <p class="tariff-price">$234</p>
+                                        <p class="discount">-35%</p>
+                                    </div>
+                                    <label for="select-duration"></label>
+                                    <select class="select-duration" name="select-duration" id="select-duration">
+                                        <option value="1">1 месяц</option>
+                                        <option value="3">3 месяца</option>
+                                        <option value="6">6 месяцев</option>
+                                        <option value="12">12 месяцев</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="button-filled">
+                                    Попробовать
+                                    <p class="additional-option">5 дней бесплатно</p>
+                                </button>
+                            </div>
+                        </div>
+                        <div class=" tariff-option">
+                            <h3>VIP</h3>
+                            <ul>
+                                <li>Ручной трейдинг</li>
+                                <li>Автоматическое или полуавтоматическое копирование сделок</li>
+                                <li>Личный кабинет со статистикой</li>
+                                <li>Краткосрочные, среднесрочные и инвест сделки</li>
+                                <li>Доступ в Vip чат с командой</li>
+                                <li>Наш авторский курс по трейдингу</li>
+
+                            </ul>
+
+                            <div>
+                                <div>
+                                    <h4>$585</h4>
+                                    <p>-35%</p>
+                                    <label for="select-duration"></label>
+                                    <sel name="select-duration" id="select-duration">
+                                        <option value="1">1 месяц</option>
+                                        <option value="3">3 месяца</option>
+                                        <option value="6">6 месяцев</option>
+                                        <option value="12">12 месяцев</option>
+                                        </select>
+                                </div>
+                                <button type="submit">
+                                    <p>Попробовать</p>
+                                    <p>5 дней бесплатно</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section Reviews
+            <section class="reviews" id="reviews">
+                <h2>отзывы учасников комьюнити</h2>
+                <ul>
+                    <li>
+                        <img src="" alt="">
+                        <div>
+                            <h5>@ArtemGuriev</h5>
+                            <span>Общая прибыль 3043.27 USD</span>
+                            <p>Я запустил спот-бота 5 января. За 25 дней я заработал более 3 тысяч на споте без единого
+                                убытка и без страха ликвидации.
+                                Большое спасибо TradeBlade за создание такого замечательного бота.</p>
+                        </div>
+                    </li>
+                    <li><img src="" alt="">
+                        <div>
+                            <h5>@gWagon</h5>
+                            <span>Общую прибыль не афиширует</span>
+                            <p>Попробовал. Понравилось. Рекомендую ли я? Да. Но адектватно понимаю, что чем больше людей
+                                тем
+                                может быть меньше
+                                прибыли...</p>
+                        </div>
+                    </li>
+                    <li><img src="" alt="">
+                        <div>
+                            <h5>@XPonse</h5>
+                            <span>Общая прибыль 3043.27 USD</span>
+                            <p>Мой капитал 2к. Если я получаю 10 долларов в день, то за месяц я зарабатываю 300
+                                долларов. То
+                                есть 15% в месяц, что мне
+                                более чем достаточно.</p>
+                        </div>
+                    </li>
+                    <li><img src="" alt="">
+                        <div>
+                            <h5>@sanyaMnS</h5>
+                            <span>Общая прибыль 4 405.96 USD</span>
+                            <p>Сначала немного расстроился ибо заработал 4$ с одной крупной сделки. Но зато понял что
+                                все
+                                равно в плюсе. На
+                                следующей
+                                сделке все полетело вверх.</p>
+                        </div>
+                    </li>
+                </ul>
+                <button type="button">Загрузить больше отзывов</button>
+            </section>
+            -->
+            <!--Section FAQ-->
+            <section class="faq" id="faq">
+                <h2>FAQ</h2>
+                <ul>
+                    <li><button type="button">
+                            <h4>Что такое TradeBlade</h4>
+                            <p>Мы опытная команда, для которой трейдинг – профессия. TradeBlade является авторизованным
+                                официальным брокером биржи
+                                Binance.
+
+                                Он представляет пользователям множество преимуществ, таких как более високая скорость
+                                синхронизации API и возможность
+                                создать учетную запись Binance через платформу TradeBlade всего в 1 клик.</p>
+                        </button></li>
+                    <li><button type="button">
+                            <h4>Что TradeBlade предлагает инвесторам</h4>
+                            <p>Мы опытная команда, для которой трейдинг – профессия. TradeBlade является авторизованным
+                                официальным брокером биржи
+                                Binance.
+
+                                Он представляет пользователям множество преимуществ, таких как более високая скорость
+                                синхронизации API и возможность
+                                создать учетную запись Binance через платформу TradeBlade всего в 1 клик.</p>
+                        </button></li>
+
+                    <li><button type="button">
+                            <h4>Должен ли я перевести свои средства на TradeBlade</h4>
+                            <p>Мы опытная команда, для которой трейдинг – профессия. TradeBlade является авторизованным
+                                официальным брокером биржи
+                                Binance.
+
+                                Он представляет пользователям множество преимуществ, таких как более високая скорость
+                                синхронизации API и возможность
+                                создать учетную запись Binance через платформу TradeBlade всего в 1 клик.</p>
+                        </button></li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <h2>Начните прямо сейчас с бесплатным
+                    5–и дневным пробным периодом!</h2>
+                <input type="text" name="" id="">
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
