@@ -65,3 +65,62 @@ document.addEventListener("DOMContentLoaded", function ()
     carousel.addEventListener("scroll", updateSlider);
 });
 
+/* toggle tariff buttons */
+
+document.addEventListener('DOMContentLoaded', () =>
+{
+    const buttons = document.querySelectorAll('.tariff-select button');
+
+    buttons.forEach(button =>
+    {
+        button.addEventListener('click', () =>
+        {
+            // Remove 'button-filled' from all buttons and add 'button-transparent'
+            buttons.forEach(btn => btn.classList.remove('button-filled', 'button-transparent'));
+
+            // Set clicked button to 'button-filled' and others to 'button-transparent'
+            button.classList.add('button-filled');
+            buttons.forEach(btn =>
+            {
+                if (btn !== button) {
+                    btn.classList.add('button-transparent');
+                }
+            });
+        });
+    });
+});
+
+/* Accordion open-close */
+
+document.querySelectorAll('.accordion-header').forEach(header =>
+{
+    header.addEventListener('click', () =>
+    {
+        const accordionItem = header.parentElement;
+        const accordionContent = accordionItem.querySelector('.accordion-content');
+        const accordionIcon = header.querySelector('.accordion-open');
+
+        // Close all open accordions except the current one
+        document.querySelectorAll('.accordion-content').forEach(content =>
+        {
+            if (content !== accordionContent) {
+                content.style.maxHeight = null;
+                content.previousElementSibling.classList.remove('active');
+                content.previousElementSibling.querySelector('.accordion-open').classList.remove('active');
+            }
+        });
+
+        // Toggle the current accordion
+        if (accordionContent.style.maxHeight) {
+            accordionContent.style.maxHeight = null;
+            header.classList.remove('active');
+            accordionIcon.classList.remove('active');
+        } else {
+            accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+            header.classList.add('active');
+            accordionIcon.classList.add('active');
+        }
+    });
+});
+
+

@@ -23,8 +23,7 @@
 .wrapper {
   max-inline-size: 1440px;
   margin-inline: auto;
-  padding-inline: 10px;
-  border: 5px dotted red;
+  padding-inline: 16px;
 }
 
 /* Basic Buttons style */
@@ -40,6 +39,10 @@
   border: 2px solid var(--q-color);
 }
 
+.button-shadow {
+  box-shadow: 0px 0px 4px 0px var(--q-color);
+}
+
 .button-transparent {
   font-weight: 500;
   font-size: 16px;
@@ -52,11 +55,12 @@
   color: var(--q-color);
 }
 
+/*
 .button-filled:hover,
 .button-transparent:hover {
   box-shadow: 0px 0px 8px 0px #57e1ff;
 }
-
+*/
 .button-transparent:hover {
   background-color: var(--q-color);
   color: white;
@@ -178,6 +182,7 @@
 /* Landing Page styles */
 .main-page {
   background-color: var(--secondary-color);
+  position: relative;
 }
 
 .main-page-content {
@@ -235,10 +240,23 @@
 
 .statistics {
   background-color: var(--light-color);
+  position: relative;
+}
+
+.curve {
+  position: absolute;
+  height: 25px;
+  bottom: -43px;
+  z-index: 1;
+  width: 50%;
+}
+
+.curve.main-page-curve path {
+  fill: var(--light-color);
 }
 
 .wrapper.statistics-box {
-  padding: 24px 0 48px 0;
+  padding: 24px 10px 48px 10px;
 }
 
 .statistics-title-box {
@@ -461,7 +479,7 @@
 
 .about {
   background-color: var(--light-color);
-  padding-bottom: 166px;
+  padding-bottom: 40px;
 }
 
 .wrapper.about-box {
@@ -485,8 +503,11 @@
 /* Section Company Description styles*/
 
 .company-description {
-  background-color: var(--secondary-color);
-  padding-top: 92px;
+  background-image: linear-gradient(
+    to top,
+    var(--secondary-color) 88%,
+    var(--light-color) 12%
+  );
 }
 
 .company-description .subscribe-title {
@@ -499,10 +520,13 @@
 }
 
 .company-description .subscribe-box {
-  margin-top: -92px;
   background-color: var(--violet);
   padding: 16px;
   border-radius: 4px;
+  max-width: 630px;
+  justify-self: center;
+  position: relative;
+  z-index: 1;
 }
 
 .description.subscribe {
@@ -554,6 +578,7 @@
 .tariffs {
   background-color: var(--secondary-color);
   padding-top: 45px;
+  padding-bottom: 44px;
 }
 
 .tariffs-title {
@@ -570,16 +595,26 @@
   display: flex;
   padding: 4px;
   margin-bottom: 24px;
+  border-radius: 4px;
 }
 
 .tariff-select button {
   flex: 1;
   max-width: 180px;
+  box-shadow: none;
+}
+
+.tariff-select .button-transparent {
+  border: 2px solid var(--dark-violet);
 }
 
 .tariff-option {
   border: 1px solid var(--violet);
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .tariff-option-title {
@@ -588,7 +623,7 @@
   line-height: 28px;
   color: var(--text-light);
   margin-bottom: 24px;
-  padding: 16px;
+  padding: 0 16px;
 }
 
 .tariff-details-box {
@@ -658,7 +693,7 @@
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 4px;
-  padding: 6px;
+  padding: 8px;
   margin: 2px 0;
   color: var(--text-light);
 }
@@ -682,6 +717,7 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  padding: 0 8px;
 }
 
 .tariff-option .button-filled {
@@ -697,4 +733,149 @@
   line-height: 16px;
   text-transform: none;
   opacity: 0.56;
+}
+
+.tariff-option.vip {
+  margin-top: 20px;
+  background-color: var(--violet);
+}
+
+/* Section FAQ Styles */
+
+.faq {
+  background: var(--light-color);
+  padding-top: 56px;
+  padding-bottom: 54px;
+}
+
+.faq-title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  margin-bottom: 40px;
+}
+
+.accordion {
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordion-header {
+  background-color: #eaeff0;
+  padding: 16px;
+  padding-bottom: 12px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header.active {
+  background-color: var(--violet);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.accordion-header.active h3 {
+  color: var(--text-light);
+}
+
+.accordion-header h3 {
+  width: 80%;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--text-dark);
+}
+
+.accordion-open {
+  transition: transform 0.3s ease;
+  stroke: var(--secondary-color);
+}
+
+.accordion-open.active {
+  transform: rotate(180deg);
+  stroke: var(--light-color);
+}
+
+.accordion-content {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  background-color: var(--violet);
+  padding: 0 16px;
+}
+
+.accordion-content p {
+  font-size: 16px;
+  color: var(--text-light);
+  padding-bottom: 16px;
+  margin: 0;
+}
+
+/* Footer styles */
+
+.footer {
+  background-color: var(--secondary-color);
+}
+
+.top-footer {
+  padding: 40px 42px 57px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-title {
+  opacity: 0.4;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.footer-menu li {
+  margin-bottom: 16px;
+}
+
+.footer-menu-item {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.footer-divider {
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bottom-footer {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.legal {
+  opacity: 0.5;
+  text-decoration: none;
+  color: var(--text-light);
+}
+
+.bottom-divider {
+  border: none;
+  border-bottom: 5px solid var(--violet);
 }
