@@ -34,7 +34,7 @@
   text-transform: uppercase;
   background-color: var(--q-color);
   border: none;
-  padding: 16px 24px;
+  padding: 16px 0;
   border-radius: 3px;
   border: 2px solid var(--q-color);
 }
@@ -49,7 +49,7 @@
   line-height: 20px;
   text-transform: uppercase;
   background-color: transparent;
-  padding: 16px 24px;
+  padding: 16px 0;
   border-radius: 3px;
   border: 2px solid var(--q-color);
   color: var(--q-color);
@@ -132,22 +132,33 @@
   z-index: 10;
   flex-direction: column;
   background: var(--violet);
-  position: absolute;
-  width: 100%;
+  position: fixed; /* Changed from absolute to fixed */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.navigation.active {
+  display: flex;
 }
 
 .close-icon {
   align-self: flex-end;
   font-size: 22px;
   color: var(--text-light);
+  cursor: pointer;
 }
 
 .navigation ul {
   list-style: none;
   display: flex;
-  gap: 32px;
   flex-direction: column;
-  align-items: flex-start;
+  gap: 32px;
+  margin-top: 20px;
 }
 
 .menu-item {
@@ -160,7 +171,7 @@
 }
 
 .menu-item:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: transform 0.3s ease;
 }
 
@@ -169,14 +180,15 @@
 }
 
 .login-registration {
+  margin-top: auto;
   display: flex;
+  gap: 16px;
   justify-content: space-between;
 }
 
 .login-registration .button-transparent,
 .login-registration .button-filled {
-  flex: 1;
-  max-width: 30%;
+  width: 50%;
 }
 
 /* Landing Page styles */

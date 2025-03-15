@@ -7,14 +7,28 @@ document.addEventListener("DOMContentLoaded", function ()
     const hamburger = document.querySelector(".hamburger");
     const navigation = document.querySelector(".navigation");
     const closeIcon = document.querySelector(".close-icon");
+    const menuItems = document.querySelectorAll(".menu-item");
 
     function toggleMenu()
     {
         navigation.classList.toggle("active");
         hamburger.classList.toggle("active");
     }
+
+    // Close the menu when a menu item is clicked
+    function closeMenu()
+    {
+        navigation.classList.remove("active");
+        hamburger.classList.remove("active");
+    }
+
     hamburger.addEventListener("click", toggleMenu);
     closeIcon.addEventListener("click", toggleMenu);
+
+    menuItems.forEach(item =>
+    {
+        item.addEventListener("click", closeMenu);
+    });
 });
 
 // Cards Carousel 
