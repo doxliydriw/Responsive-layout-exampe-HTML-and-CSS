@@ -16,7 +16,7 @@
     <header class="header">
         <div class="wrapper header-box">
             <!-- Logo -->
-            <logo class="logo">
+            <div class="logo">
                 <svg width="118" height="52" viewBox="0 0 118 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M60.4458 25.2407H55.1782L52.4292 37.8835H58.1033C62.1859 37.8835 63.3977 35.6359 63.4121 33.8624C63.4246 32.3171 62.5474 31.685 61.7193 31.4128L61.7463 31.2724C62.9074 31.0178 64.3163 30.0696 64.3321 28.1205C64.3473 26.2416 62.8936 25.2407 60.4458 25.2407ZM56.1694 35.3022L56.726 32.7913H58.9662C59.8225 32.7913 60.33 33.1424 60.3241 33.8712C60.318 34.6262 59.7417 35.3022 58.5307 35.3022H56.1694ZM57.2831 30.21L57.8041 27.822H59.8713C60.7276 27.822 61.2007 28.1468 61.1951 28.8404C61.1893 29.5603 60.6478 30.21 59.4109 30.21H57.2831Z"
@@ -90,7 +90,7 @@
                         </filter>
                     </defs>
                 </svg>
-            </logo>
+            </div>
             <!--Navigation Hamburger on Mobile view -->
             <button type="button" class="hamburger">
                 <span class="menu-icon">
@@ -121,42 +121,40 @@
                 </ul>
                 <!--Login Registration Buttons-->
                 <div class="login-registration">
-                    <button class="button-transparent">вход</button>
-                    <button class="button-filled">регистрация</button>
+                    <button type="button" class="button-transparent">вход</button>
+                    <button type="button" class="button-filled">регистрация</button>
                 </div>
             </nav>
         </div>
     </header>
     <main>
         <!--Section Main Page-->
-        <section class="main-page">
-            <div class="wrapper">
-                <div class="main-page-content">
-                    <div class="main-text-box">
-                        <h1 class="main-title">моментально копируй сделки профи трейдеров</h1>
-                        <p class="main-text">Начни копировать сделки с успешной командой профессиональных трейдеров
-                            в
-                            автоматическом режиме.
-                    </div>
-                    <div class="subscribe-box">
-                        <div class="subscribe">
-                            <input type="text" placeholder="Ваш e–mail"></input>
-                            <button type="submit" class="button-filled">Начать</button>
-                        </div>
-                        <p>5 дней бесплатного пользования</p>
-                    </div>
+        <section class="main-page" id="main-page">
+            <div class="wrapper main-page-content">
+                <div class="main-text-box">
+                    <h1 class="main-title">моментально копируй сделки профи трейдеров</h1>
+                    <p class="main-text">Начни копировать сделки с успешной командой профессиональных трейдеров
+                        в
+                        автоматическом режиме.
+                </div>
+                <div class="subscribe-box">
+                    <form action="/subscribe" method="POST" class="subscribe">
+                        <input type="email" placeholder="Ваш e–mail"></input>
+                        <button type="submit" class="button-filled main-page-subscribe button-shadow">Начать</button>
+                    </form>
+                    <p>5 дней бесплатного пользования</p>
                     <div class="main-page-background">
                         <img src="./img/loading_page_background.png" alt="loading page background image">
                     </div>
                 </div>
-            </div>
-            <svg class="curve main-page-curve" width="282" height="82" viewBox="0 0 282 82" fill="none"
+                <!--  <svg class="curve main-page-curve" width="282" height="82" viewBox="0 0 282 82" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M-5 9C-5 4.02944 -0.970562 0 4 0H237.855C241.179 0 244.232 1.83153 245.796 4.7638L279.939 68.7638C283.137 74.7588 278.793 82 271.998 82H4C-0.970562 82 -5 77.9706 -5 73V9Z"
                     fill=var(--light-color) />
-            </svg>
+            </svg> -->
         </section>
+        <div class="folder-divider"></div>
         <!--Section Statistics-->
         <section class="statistics" id="statistics">
             <div class="wrapper statistics-box">
@@ -197,7 +195,14 @@
                             </div>
                             <div class="income-box">
                                 <p class="income">Прибыль</p>
-                                <p class="income-value">58.6206%</p>
+                                <div class="income-value-box">
+                                    <p class="income-value">58.6206%</p>
+                                    <svg width="11" height="18" viewBox="0 0 11 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.71429 2L10 6.5M5.71429 2L1 6.5M5.71429 2V18" stroke="#35FF9E"
+                                            stroke-width="2" />
+                                    </svg>
+                                </div>
                             </div>
                             <div class="target-box">
                                 <p class="target">Цель 4</p>
@@ -227,7 +232,14 @@
                             </div>
                             <div class="income-box">
                                 <p class="income">Прибыль</p>
-                                <p class="income-value">58.6206%</p>
+                                <div class="income-value-box">
+                                    <p class="income-value">58.6206%</p>
+                                    <svg width="11" height="18" viewBox="0 0 11 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.71429 2L10 6.5M5.71429 2L1 6.5M5.71429 2V18" stroke="#35FF9E"
+                                            stroke-width="2" />
+                                    </svg>
+                                </div>
                             </div>
                             <div class="target-box">
                                 <p class="target">Цель 4</p>
@@ -257,7 +269,14 @@
                             </div>
                             <div class="income-box">
                                 <p class="income">Прибыль</p>
-                                <p class="income-value">58.6206%</p>
+                                <div class="income-value-box">
+                                    <p class="income-value">58.6206%</p>
+                                    <svg width="11" height="18" viewBox="0 0 11 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.71429 2L10 6.5M5.71429 2L1 6.5M5.71429 2V18" stroke="#35FF9E"
+                                            stroke-width="2" />
+                                    </svg>
+                                </div>
                             </div>
                             <div class="target-box">
                                 <p class="target">Цель 4</p>
@@ -287,7 +306,14 @@
                             </div>
                             <div class="income-box">
                                 <p class="income">Прибыль</p>
-                                <p class="income-value">58.6206%</p>
+                                <div class="income-value-box">
+                                    <p class="income-value">58.6206%</p>
+                                    <svg width="11" height="18" viewBox="0 0 11 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.71429 2L10 6.5M5.71429 2L1 6.5M5.71429 2V18" stroke="#35FF9E"
+                                            stroke-width="2" />
+                                    </svg>
+                                </div>
                             </div>
                             <div class="target-box">
                                 <p class="target">Цель 4</p>
@@ -317,7 +343,14 @@
                             </div>
                             <div class="income-box">
                                 <p class="income">Прибыль</p>
-                                <p class="income-value">58.6206%</p>
+                                <div class="income-value-box">
+                                    <p class="income-value">58.6206%</p>
+                                    <svg width="11" height="18" viewBox="0 0 11 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.71429 2L10 6.5M5.71429 2L1 6.5M5.71429 2V18" stroke="#35FF9E"
+                                            stroke-width="2" />
+                                    </svg>
+                                </div>
                             </div>
                             <div class="target-box">
                                 <p class="target">Цель 4</p>
@@ -345,6 +378,7 @@
                 </div>
             </div>
         </section>
+        <div class="folder-divider"></div>
         <!-- Section About-->
         <section class="about" id="about">
             <div class="wrapper about-box">
@@ -366,10 +400,10 @@
                 <div class="subscribe-box">
                     <h4 class="subscribe-title">Попробуйте сейчас и получите
                         5 дней бесплатного пользования</h4>
-                    <div class="description subscribe">
-                        <input type="text" placeholder="Ваш e–mail"></input>
+                    <form action="/subscribe" method="POST" class="description subscribe">
+                        <input type="email" placeholder="Ваш e–mail"></input>
                         <button type="submit" class="button-filled">попробовать</button>
-                    </div>
+                    </form>
                 </div>
                 <!-- Card list-->
                 <h2 class="description-title">tradeblade это</h2>
@@ -498,7 +532,7 @@
                         </div>
                         <button type="submit" class="button-filled">
                             Попробовать
-                            <p class="additional-option">5 дней бесплатно</p>
+                            <span class="additional-option">5 дней бесплатно</span>
                         </button>
                     </div>
                     <div class="tariff-option vip">
@@ -542,7 +576,7 @@
                         </div>
                         <button type="submit" class="button-filled">
                             Попробовать
-                            <p class="additional-option">5 дней бесплатно</p>
+                            <span class="additional-option">5 дней бесплатно</span>
                         </button>
                     </div>
                 </div>
