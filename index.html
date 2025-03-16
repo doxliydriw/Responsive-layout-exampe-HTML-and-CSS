@@ -121,16 +121,36 @@
                 </ul>
                 <!--Login Registration Buttons-->
                 <div class="login-registration">
-                    <button type="button" class="button-transparent">вход</button>
-                    <button type="button" class="button-filled">регистрация</button>
+                    <button type="button" class="button-transparent button-medium">вход</button>
+                    <button type="button" class="button-filled button-medium">регистрация</button>
                 </div>
             </nav>
+            <!-- Desktop Navigation Menu-->
+            <nav class="navigation-desktop">
+                <ul class="navigation-menu">
+                    <li><a class="menu-item" href="#statistics">цифры</a></li>
+                    <li><a class="menu-item" href="#deals">сделки онлайн</a></li>
+                    <li><a class="menu-item" href="#about">о компании</a></li>
+                    <li><a class="menu-item" href="#how-to">как начать</a></li>
+                    <li><a class="menu-item" href="#tariffs">тарифы</a></li>
+                    <li><a class="menu-item" href="#reviews">отзывы</a></li>
+                    <li><a class="menu-item" href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <!--Login Registration Buttons-->
+            <div class="login-registration-desktop">
+                <button type="button" class="button-transparent button-small">вход</button>
+                <button type="button" class="button-filled button-small">регистрация</button>
+            </div>
         </div>
     </header>
     <main>
         <!--Section Main Page-->
         <section class="main-page" id="main-page">
             <div class="wrapper main-page-content">
+                <div class="main-page-background">
+                    <img src="./img/loading_page_background.png" alt="loading page background image">
+                </div>
                 <div class="main-text-box">
                     <h1 class="main-title">моментально копируй сделки профи трейдеров</h1>
                     <p class="main-text">Начни копировать сделки с успешной командой профессиональных трейдеров
@@ -140,29 +160,25 @@
                 <div class="subscribe-box">
                     <form action="/subscribe" method="POST" class="subscribe">
                         <input type="email" placeholder="Ваш e–mail"></input>
-                        <button type="submit" class="button-filled main-page-subscribe button-shadow">Начать</button>
+                        <button type="submit"
+                            class="mobile button-filled button-small main-page-subscribe button-shadow">Начать</button>
+                        <button type="submit"
+                            class="desktop button-filled button-medium main-page-subscribe button-shadow">Начать</button>
+
                     </form>
                     <p>5 дней бесплатного пользования</p>
-                    <div class="main-page-background">
-                        <img src="./img/loading_page_background.png" alt="loading page background image">
-                    </div>
                 </div>
-                <!--  <svg class="curve main-page-curve" width="282" height="82" viewBox="0 0 282 82" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M-5 9C-5 4.02944 -0.970562 0 4 0H237.855C241.179 0 244.232 1.83153 245.796 4.7638L279.939 68.7638C283.137 74.7588 278.793 82 271.998 82H4C-0.970562 82 -5 77.9706 -5 73V9Z"
-                    fill=var(--light-color) />
-            </svg> -->
+            </div>
         </section>
         <div class="folder-divider"></div>
         <!--Section Statistics-->
         <section class="statistics" id="statistics">
             <div class="wrapper statistics-box">
-                <div class="statistics-title-box">
-                    <h2 class="statistics-title">цифры</h2>
-                    <p class="statistics-text">сентябрь 2022</p>
-                </div>
                 <div class="card-box">
+                    <div class="statistics-title-box">
+                        <h2 class="statistics-title">цифры</h2>
+                        <p class="statistics-text">сентябрь 2022</p>
+                    </div>
                     <div class="statistics-card">
                         <p class="title">Торговой прибыли</p>
                         <p class="value">2756%</p>
@@ -382,29 +398,31 @@
         <!-- Section About-->
         <section class="about" id="about">
             <div class="wrapper about-box">
-                <h2 class="about-title">О компании</h2>
-                <p class="about-text">Мы опытная команда, для которой трейдинг – профессия. TradeBlade является
-                    авторизованным официальным брокером биржи
-                    Binance.
-                    <br><br>
-                    Он представляет пользователям множество преимуществ, таких как более високая скорость
-                    синхронизации
-                    API и возможность
-                    создать учетную запись Binance через платформу TradeBlade всего в 1 клик.
-                </p>
+                <div class="about-text-box">
+                    <h2 class="about-title">О компании</h2>
+                    <p class="about-text">Мы опытная команда, для которой трейдинг – профессия. TradeBlade является
+                        авторизованным официальным брокером биржи
+                        Binance.
+                        <br><br>
+                        Он представляет пользователям множество преимуществ, таких как более високая скорость
+                        синхронизации
+                        API и возможность
+                        создать учетную запись Binance через платформу TradeBlade всего в 1 клик.
+                    </p>
+                </div>
+                <div class="subscribe-box">
+                    <h4 class="subscribe-title">Попробуйте сейчас и получите <br>
+                        5 дней бесплатного пользования</h4>
+                    <form action="/subscribe" method="POST" class="about subscribe">
+                        <input type="email" placeholder="Ваш e–mail"></input>
+                        <button type="submit" class="button-filled button-medium">попробовать</button>
+                    </form>
+                </div>
             </div>
         </section>
         <!--Section Company Description-->
         <section class="company-description" id="company-description">
             <div class="wrapper company-description-box">
-                <div class="subscribe-box">
-                    <h4 class="subscribe-title">Попробуйте сейчас и получите
-                        5 дней бесплатного пользования</h4>
-                    <form action="/subscribe" method="POST" class="description subscribe">
-                        <input type="email" placeholder="Ваш e–mail"></input>
-                        <button type="submit" class="button-filled">попробовать</button>
-                    </form>
-                </div>
                 <!-- Card list-->
                 <h2 class="description-title">tradeblade это</h2>
                 <div class="description-card-box">
@@ -419,6 +437,17 @@
                         </div>
                     </div>
                     <div class="description-card">
+                        <img src="./img/description_card_icon_4.svg" alt="icon">
+                        <div>
+                            <h4 class="description-card-title">Торговля спотовыми и фьючерсными сделками</h4>
+                            <p class="description-card-text">Платформа для копи–трейдинга поддерживает торговлю как
+                                спотовыми, так и фьючерсными
+                                сделками
+                                на Binance.</p>
+                        </div>
+                    </div>
+
+                    <div class="description-card">
                         <img src="./img/description_card_icon_2.svg" alt="icon">
                         <div>
                             <h4 class="description-card-title">Высокая прибыль каждий день</h4>
@@ -426,6 +455,16 @@
                                 за счет хорошего денежного и
                                 риск
                                 менеджмента.</p>
+                        </div>
+                    </div>
+                    <div class="description-card">
+                        <img src="./img/description_card_icon_5.svg" alt="icon">
+                        <div>
+                            <h4 class="description-card-title">Собственный курс по трейдингу</h4>
+                            <p class="description-card-text">Мы хотим менять комьюнити, улучшать его. В личном
+                                кабинете на сайте вы найдете наш
+                                собственный курс по криптовалютам,
+                                который поможет увереннее понимать наши сигналы и разрабатывать свои.</p>
                         </div>
                     </div>
                     <div class="description-card">
@@ -437,26 +476,6 @@
                                 чате
                                 присутствуют люди из нашей
                                 команды, которые общаються со всеми, помагают и подсказывают.</p>
-                        </div>
-                    </div>
-                    <div class="description-card">
-                        <img src="./img/description_card_icon_4.svg" alt="icon">
-                        <div>
-                            <h4 class="description-card-title">Торговля спотовыми и фьючерсными сделками</h4>
-                            <p class="description-card-text">Платформа для копи–трейдинга поддерживает торговлю как
-                                спотовыми, так и фьючерсными
-                                сделками
-                                на Binance.</p>
-                        </div>
-                    </div>
-                    <div class="description-card">
-                        <img src="./img/description_card_icon_5.svg" alt="icon">
-                        <div>
-                            <h4 class="description-card-title">Собственный курс по трейдингу</h4>
-                            <p class="description-card-text">Мы хотим менять комьюнити, улучшать его. В личном
-                                кабинете на сайте вы найдете наш
-                                собственный курс по криптовалютам,
-                                который поможет увереннее понимать наши сигналы и разрабатывать свои.</p>
                         </div>
                     </div>
                 </div>
@@ -493,10 +512,10 @@
             <div class="wrapper tariffs-box">
                 <h2 class="tariffs-title">тарифы</h2>
                 <div class="tariff-select">
-                    <button type="button" class="button-filled">спот</button>
-                    <button type="button" class="button-transparent">фьючерс</button>
+                    <button type="button" class="button-filled button-medium">спот</button>
+                    <button type="button" class="button-transparent button-medium">фьючерс</button>
                 </div>
-                <div>
+                <div class="tariff-options">
                     <div class="tariff-option standard">
                         <h3 class="tariff-option-title">STANDARD</h3>
                         <div class="tariff-details-box">
@@ -517,23 +536,25 @@
                             </div>
                             <hr class="dashed-divider">
                         </div>
-                        <div class="duration-box">
-                            <div class="tariff-container">
-                                <p class="tariff-price">$234</p>
-                                <p class="discount">-35%</p>
+                        <div class="duration-container">
+                            <div class="duration-box">
+                                <div class="tariff-container">
+                                    <p class="tariff-price">$234</p>
+                                    <p class="discount">-35%</p>
+                                </div>
+                                <label for="select-duration"></label>
+                                <select class="select-duration" name="select-duration" id="select-duration">
+                                    <option value="1">1 месяц</option>
+                                    <option value="3">3 месяца</option>
+                                    <option value="6">6 месяцев</option>
+                                    <option value="12">12 месяцев</option>
+                                </select>
                             </div>
-                            <label for="select-duration"></label>
-                            <select class="select-duration" name="select-duration" id="select-duration">
-                                <option value="1">1 месяц</option>
-                                <option value="3">3 месяца</option>
-                                <option value="6">6 месяцев</option>
-                                <option value="12">12 месяцев</option>
-                            </select>
+                            <button type="submit" class="button-filled tariff-try">
+                                Попробовать
+                                <span class="additional-option">5 дней бесплатно</span>
+                            </button>
                         </div>
-                        <button type="submit" class="button-filled">
-                            Попробовать
-                            <span class="additional-option">5 дней бесплатно</span>
-                        </button>
                     </div>
                     <div class="tariff-option vip">
                         <h3 class="tariff-option-title">VIP</h3>
@@ -561,23 +582,25 @@
                             </div>
                             <hr class="dashed-divider">
                         </div>
-                        <div class="duration-box">
-                            <div class="tariff-container">
-                                <p class="tariff-price">$585</p>
-                                <p class="discount">-35%</p>
+                        <div class="duration-container">
+                            <div class="duration-box">
+                                <div class="tariff-container">
+                                    <p class="tariff-price">$585</p>
+                                    <p class="discount">-35%</p>
+                                </div>
+                                <label for="select-duration"></label>
+                                <select class="select-duration" name="select-duration" id="select-duration">
+                                    <option value="1">1 месяц</option>
+                                    <option value="3">3 месяца</option>
+                                    <option value="6">6 месяцев</option>
+                                    <option value="12">12 месяцев</option>
+                                </select>
                             </div>
-                            <label for="select-duration"></label>
-                            <select class="select-duration" name="select-duration" id="select-duration">
-                                <option value="1">1 месяц</option>
-                                <option value="3">3 месяца</option>
-                                <option value="6">6 месяцев</option>
-                                <option value="12">12 месяцев</option>
-                            </select>
+                            <button type="submit" class="button-filled tariff-try">
+                                Попробовать
+                                <span class="additional-option">5 дней бесплатно</span>
+                            </button>
                         </div>
-                        <button type="submit" class="button-filled">
-                            Попробовать
-                            <span class="additional-option">5 дней бесплатно</span>
-                        </button>
                     </div>
                 </div>
             </div>
