@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function ()
     });
 });
 
-// Cards Carousel 
+/* Cards Carousel 
 
 document.addEventListener("DOMContentLoaded", function ()
 {
